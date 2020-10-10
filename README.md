@@ -1,24 +1,27 @@
 # vue-shop
 
-## Project setup
+### 项目配置（初始化项目安装依赖）
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译启动项目
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 编译打包项目
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 运用的技术栈
 ```
-npm run lint
+vue.js    
+vue router      管理路由   
+Vue CLI         快速创建项目  
+vuex            管理共享的数据状态  
+axios           请求库  
+element         一个第三方组件库   
+echarts         视图     
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
