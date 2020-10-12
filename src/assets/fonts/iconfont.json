@@ -1,0 +1,23 @@
+{
+  "id": "2125011",
+  "name": "vue-shop",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1043201",
+      "name": "用户名",
+      "font_class": "yonghuming",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "11518450",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    }
+  ]
+}
