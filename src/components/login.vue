@@ -6,17 +6,24 @@
         <img src="@/assets/logo.png" alt="">
       </div>
       <!-- 表单 -->
-      <el-form label-width="0px" class="login-form">
+      <el-form
+        label-width="0px"
+        class="login-form"
+        :model="userData"
+      >
         <el-form-item>
           <el-input
             placeholder="用户名"
-            prefix-icon="iconfont icon-yonghuming"
+            prefix-icon="iconfont icon-user-name"
+            v-model="userData.username"
           ></el-input>
         </el-form-item>
         <el-form-item>
           <el-input
             placeholder="密码"
-            prefix-icon="iconfont icon-mima"
+            prefix-icon="iconfont icon-password"
+            v-model="userData.password"
+            type="password"
           ></el-input>
         </el-form-item>
         <el-form-item class="btns">
@@ -34,7 +41,12 @@ export default {
   props: {},
   components: {},
   data () {
-    return {}
+    return {
+      userData: {
+        username: 'admin',
+        password: '123456'
+      }
+    }
   },
   created () {},
   methods: {},
