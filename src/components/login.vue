@@ -10,15 +10,16 @@
         label-width="0px"
         class="login-form"
         :model="userData"
+        :rules="rules"
       >
-        <el-form-item>
+        <el-form-item prop="username">
           <el-input
             placeholder="用户名"
             prefix-icon="iconfont icon-user-name"
             v-model="userData.username"
           ></el-input>
         </el-form-item>
-        <el-form-item>
+        <el-form-item prop="password">
           <el-input
             placeholder="密码"
             prefix-icon="iconfont icon-password"
@@ -45,6 +46,16 @@ export default {
       userData: {
         username: 'admin',
         password: '123456'
+      },
+      rules: {
+        username: [
+          { required: true, message: '请输入用户名', trigger: 'blur' },
+          { min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur' }
+        ],
+        password: [
+          { required: true, message: '请输入登录密码', trigger: 'change' },
+          { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
+        ]
       }
     }
   },
