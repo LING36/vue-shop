@@ -11,6 +11,7 @@
         class="login-form"
         :model="userData"
         :rules="rules"
+        ref="loginFromRef"
       >
         <el-form-item prop="username">
           <el-input
@@ -29,7 +30,7 @@
         </el-form-item>
         <el-form-item class="btns">
           <el-button type="primary">登录</el-button>
-          <el-button type="info">重置</el-button>
+          <el-button type="info" @click="resetLoginFrom">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -60,7 +61,14 @@ export default {
     }
   },
   created () {},
-  methods: {},
+  methods: {
+
+    // 点击重置按钮，重置表单
+    resetLoginFrom () {
+      console.log(this.$refs.loginFromRef)
+      this.$refs.loginFromRef.resetFields()
+    }
+  },
   computed: {},
   watch: {},
   mounted () {},
