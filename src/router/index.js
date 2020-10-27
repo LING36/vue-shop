@@ -2,6 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/components/login'
 import Home from '@/components/home'
+import Welcome from '@/components/welcome'
+import Users from '@/components/users'
+import Roles from '@/components/roles'
 
 Vue.use(VueRouter)
 
@@ -24,7 +27,25 @@ const routes = [
     component: Home,
     meta: {
       title: '首页'
-    }
+    },
+    redirect: '/welcome', // 默认进去welcome子路由
+    children: [
+      {
+        path: '/welcome',
+        name: 'welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        name: 'users',
+        component: Users
+      },
+      {
+        path: '/roles',
+        name: 'roles',
+        component: Roles
+      }
+    ]
   }
 ]
 
