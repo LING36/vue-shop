@@ -4,3 +4,11 @@ height: 100%;
 margin: 0;
 padding: 0;
 }
+.el-card.is-always-shadow{
+  margin-top: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  padding-top: 0;
+}
+.el-main{
+  line-height: normal !important;
+}

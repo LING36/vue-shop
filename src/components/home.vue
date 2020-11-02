@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { menus } from '@/api/user'
+import { menus } from '@/api/api'
 export default {
   name: 'Home',
   props: {},
@@ -88,8 +88,7 @@ export default {
         const { data } = res
         if (data.meta.status !== 200) {
           this.$message({
-            message: data.meta.msg,
-            type: 'success'
+            message: data.meta.msg
           })
           return
         }
