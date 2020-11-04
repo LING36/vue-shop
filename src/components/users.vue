@@ -29,7 +29,7 @@
         size="small"
         stripe
         v-loading="loading">
-         <el-table-column
+        <el-table-column
           type="index"
           :index="indexMethod"
           label="序号"
@@ -407,7 +407,5 @@ export default {
 }
 </script>
 <style lang='less' scoped>
-.el-table{
-  margin: 20px 0;
-}
+
 </style>

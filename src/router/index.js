@@ -5,6 +5,7 @@ import Home from '@/components/home'
 import Welcome from '@/components/welcome'
 import Users from '@/components/users'
 import Roles from '@/components/roles'
+import Rights from '@/components/rights'
 
 Vue.use(VueRouter)
 
@@ -33,17 +34,34 @@ const routes = [
       {
         path: '/welcome',
         name: 'welcome',
-        component: Welcome
+        component: Welcome,
+        meta: {
+          title: 'Welcome'
+        }
       },
       {
         path: '/users',
         name: 'users',
-        component: Users
+        component: Users,
+        meta: {
+          title: '用户列表'
+        }
       },
       {
         path: '/roles',
         name: 'roles',
-        component: Roles
+        component: Roles,
+        meta: {
+          title: '角色列表'
+        }
+      },
+      {
+        path: '/rights',
+        name: 'rights',
+        component: Rights,
+        meta: {
+          title: '权限列表'
+        }
       }
     ]
   }

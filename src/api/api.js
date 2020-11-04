@@ -27,6 +27,14 @@ export const menus = () => {
   })
 }
 
+// 2、所有权限列表
+export const rights = () => {
+  return request({
+    method: 'GET', // 请求方式
+    url: 'rights/list' // 请求路径（接口路径）
+  })
+}
+
 // 用户管理---------------------------------------
 
 // 1、用户数据列表
@@ -80,5 +88,48 @@ export const deleteUser = id => {
   return request({
     method: 'DELETE', // 请求方式
     url: `users/${id}` // 请求路径（接口路径）
+  })
+}
+
+// 角色管理-------------------------------------
+// 1、角色列表
+export const rolesList = () => {
+  return request({
+    method: 'GET', // 请求方式
+    url: 'roles' // 请求路径（接口路径）
+  })
+}
+
+// 2、添加角色
+export const addRoles = data => {
+  return request({
+    method: 'POST', // 请求方式
+    url: 'roles', // 请求路径（接口路径）
+    data
+  })
+}
+
+// 3、根据 ID 查询角色
+export const queryRoles = id => {
+  return request({
+    method: 'GET', // 请求方式
+    url: `roles/${id}` // 请求路径（接口路径）
+  })
+}
+
+// 4、编辑提交角色
+export const defineRoles = data => {
+  return request({
+    method: 'PUT', // 请求方式
+    url: `roles/${data.roleId}`, // 请求路径（接口路径）
+    data
+  })
+}
+
+// 5、删除角色
+export const deleteRoles = id => {
+  return request({
+    method: 'DELETE', // 请求方式
+    url: `roles/${id}` // 请求路径（接口路径）
   })
 }

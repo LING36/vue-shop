@@ -12,3 +12,6 @@ padding: 0;
 .el-main{
   line-height: normal !important;
 }
+.el-table{
+  margin: 20px 0;
+}
