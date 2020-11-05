@@ -61,7 +61,7 @@ export default {
   methods: {
     // 获取权限列表数据
     getRights () {
-      rights().then(res => {
+      rights('list').then(res => {
         const { data } = res
         if (data.meta.status !== 200) {
           this.$message({

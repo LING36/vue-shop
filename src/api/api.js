@@ -28,10 +28,10 @@ export const menus = () => {
 }
 
 // 2、所有权限列表
-export const rights = () => {
+export const rights = type => {
   return request({
     method: 'GET', // 请求方式
-    url: 'rights/list' // 请求路径（接口路径）
+    url: `rights/${type}` // 请求路径（接口路径）
   })
 }
 
@@ -131,5 +131,24 @@ export const deleteRoles = id => {
   return request({
     method: 'DELETE', // 请求方式
     url: `roles/${id}` // 请求路径（接口路径）
+  })
+}
+
+// 6、删除角色指定权限
+export const deleteRight = (roleId, rightId) => {
+  return request({
+    method: 'DELETE', // 请求方式
+    url: `roles/${roleId}/rights/${rightId}` // 请求路径（接口路径）
+  })
+}
+
+// 7、 角色授权
+export const authorizeRight = (roleId, data) => {
+  return request({
+    method: 'POST', // 请求方式
+    url: `roles/${roleId}/rights`, // 请求路径（接口路径）
+    data: {
+      rids: data
+    }
   })
 }
