@@ -83,11 +83,22 @@ export const editUserInfo = data => {
   })
 }
 
-// 5、删除单个用户
+// 6、删除单个用户
 export const deleteUser = id => {
   return request({
     method: 'DELETE', // 请求方式
     url: `users/${id}` // 请求路径（接口路径）
+  })
+}
+
+// 7、分配用户角色
+export const updateUser = (id, role) => {
+  return request({
+    method: 'PUT', // 请求方式
+    url: `users/${id}/role`, // 请求路径（接口路径）
+    data: {
+      rid: role
+    }
   })
 }
 
