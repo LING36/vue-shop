@@ -91,7 +91,7 @@
         @current-change="handleCurrentChange"
         :current-page="params.pagenum"
         :page-sizes="[10, 20, 30, 40]"
-        :page-size="100"
+        :page-size="params.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="usersList.total">
       </el-pagination>

@@ -163,3 +163,12 @@ export const authorizeRight = (roleId, data) => {
     }
   })
 }
+
+// 商品分类管理---------------------------------------
+export const getCategories = params => {
+  return request({
+    method: 'GET', // 请求方式
+    url: 'categories', // 请求路径（接口路径）
+    params
+  })
+}
